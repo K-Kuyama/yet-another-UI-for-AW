@@ -1,5 +1,6 @@
 from .datastore import DataStore
 from .observation import Observable
+import unicodedata
 #from numpy.typing.tests.data import pass
 
 """
@@ -274,7 +275,7 @@ class CategoryDefinition(Observable):
             for w in self.negative_words:
                 if not nega_str =="(?!.*(":
                     nega_str = nega_str+"|"
-                nega_str = nega_str+w[2]
+                nega_str = nega_str+self.appendCCString(w[2])
             nega_str = nega_str + "))"
         posi_str = self.getPositiveRegex(use_ev)
 
@@ -298,7 +299,7 @@ class CategoryDefinition(Observable):
             for pw in self.positive_words:
                 if not posi_str ==".*(":
                     posi_str = posi_str+"|"
-                posi_str = posi_str+pw[2]
+                posi_str = posi_str+self.appendCCString(pw[2])
             if use_ev:
                 for ev in self.events:
                     if not posi_str ==".*(":
@@ -306,6 +307,15 @@ class CategoryDefinition(Observable):
                     posi_str = posi_str+ev[3]
             posi_str = posi_str + ")"
         return posi_str
+    
+
+    def appendCCString(self, str):
+        # append combined character sequence string
+        n_str = unicodedata.normalize('NFD',str)
+        if n_str == str:
+            return str
+        else:
+            return str+"|"+n_str
 
     
 class CategoryContentsProxy(Observable):

@@ -78,6 +78,7 @@ class EventControler:
                 
         for c in self.vdef.categories:
             rgx =c.getRegex()
+#            dprint(f"RGX : {rgx}")
             if rgx: 
                 if re.search(rgx, app_str+title_str):
                     bg_color = c.color
