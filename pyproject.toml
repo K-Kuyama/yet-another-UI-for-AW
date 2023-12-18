@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "yet-another-ui-for-aw"
+version = "0.1.0"
+description = ""
+authors = ["Kazuhiro Kuyama <kuyama@systemdesignk2.jp>"]
+license = "MPL-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ipywidgets = "^8.1.1"
+notebook = "^7.0.6"
+pandas = "^2.1.4"
+janome = "^0.5.0"
+aw-client = "^0.5.13"
+matplotlib = "^3.8.2"
+voila = "^0.5.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
