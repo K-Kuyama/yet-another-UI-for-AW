@@ -47,7 +47,7 @@ class EventSelector(Observer):
         self.categories = self.controler.get_category_data()
         ## ヘッダ部のウィジェットの生成 ##
         cache_selector = widgets.Select(
-                                    options=[('時間の長いイベント','longest'), ('最近のイベント','latest')],
+                                    options=[(_('Longest events'),'longest'), (_('latest events'),'latest')],
                                     value='longest',
                                     disabled=False,
                                     rows=1,
@@ -58,7 +58,7 @@ class EventSelector(Observer):
         date_picker = widgets.DatePicker(value=date.today(), layout=widgets.Layout(width='160px'))  
         self.date_picker = date_picker
         
-        update_button = widgets.Button(description = "更新",layout=widgets.Layout(width='60px'))
+        update_button = widgets.Button(description = _("Reload"),layout=widgets.Layout(width='60px'))
         #更新ボタンのコールバック設定
         update_button.on_click(self.updateData)
         
@@ -104,7 +104,7 @@ class EventSelector(Observer):
         ## フッター部のボタンを生成　##
         bulk_of_buttons = widgets.HBox([])
         self.bulk_of_buttons = bulk_of_buttons
-        clear_button = widgets.Button(description ='解除')
+        clear_button = widgets.Button(description =_('Cancel'))
         clear_button.on_click(self.clear_category)
         footer_layout = widgets.Layout(
                                     display='flex',
@@ -126,7 +126,8 @@ class EventSelector(Observer):
 
     def _set_view_data(self):
         ## ヘッダ部分のデータとの紐付け ##
-        self.indicator_label.value = f"{self.head_p+1}〜{self.tail_p+1}/{self.item_length}"
+        from_to_str =_(' - ')
+        self.indicator_label.value = f"{self.head_p+1}{from_to_str}{self.tail_p+1}/{self.item_length}"
         if self.head_p == 0:
             self.left_arrow.disabled=True
         else:

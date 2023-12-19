@@ -14,9 +14,9 @@ class EditorPanel:
         self.item_list_editor = item_list_editor
 
         editor_pair = widgets.HBox([item_list_editor.widget, property_editor.out])
-
+        str_def = _(" Editor")
         self.widget = widgets.Accordion(children=[editor_pair], 
-                                        titles=([f"{self.str}定義の追加・削除・編集"]))
+                                        titles=([f"{self.str}{str_def}"]))
 
     def setData(self, items):
         self.item_list_editor.setData(items)
@@ -29,7 +29,7 @@ class ViewBuilder(EditorPanel):
     def __init__(self, defmodel):
         super().__init__(defmodel)
         self.items = defmodel.views
-        self.str = "ビュー"
+        self.str = _("Viewpoint")
         super()._initialize_widget()
         self.setData(self.items)
         
@@ -54,7 +54,7 @@ class CategoryBuilder(EditorPanel):
     def __init__(self, defmodel):
         super().__init__(defmodel)
         self.items = defmodel.categories
-        self.str = "カテゴリー"
+        self.str = _("Category")
         super()._initialize_widget()
         self.setData(self.items)
         
@@ -89,14 +89,14 @@ class PropertyEditor:
     def _initialize_widget(self):
         self.name_text = widgets.Text(
                             value = self.name,
-                            description='Label Strings:')
+                            description=_('Title:'))
 
         self.color_picker = widgets.ColorPicker(
                             concise=False,
-                            description='Color:',
+                            description=_('Color:'),
                             value=self.color)
         save_button = widgets.Button(
-                            description ='Save',
+                            description =_('Save'),
                             layout = widgets.Layout(width = '45pt') )
     
         save_button.on_click(self._closeEditPanel)
@@ -141,7 +141,7 @@ class ItemListEditor:
         widget_list = []
         widget_list_box =widgets.VBox(widget_list, layout=widgets.Layout(border='1px solid black'))
         self.widget_list_box = widget_list_box
-        add_button = widgets.Button(description ='アイテムの追加',
+        add_button = widgets.Button(description =_('Add a new item'),
                                layout = widgets.Layout(width = '100pt'),
                                 style = {"text_color":"white", "font_weight":"bold", "button_color":"gray"}
                                 )
@@ -202,16 +202,16 @@ class ItemRowWidget:
                             layout = widgets.Layout(width = '180pt'),
                             style={"background": self.color}
                             )
-        self.remove_button = widgets.Button(description ='削除',
+        self.remove_button = widgets.Button(description =_('delete'),
                                             disabled = False,
-                                layout = widgets.Layout(width = '36pt'),
+                                layout = widgets.Layout(width = '45pt'),
                                 style = {"button_color":self.color,
                                     "text_color":"white"}
                                 )
         self.remove_button.on_click(self._removeItem)
-        self.edit_button = widgets.Button(description ='編集',
+        self.edit_button = widgets.Button(description =_('Edit'),
                                             disabled = False,
-                                    layout = widgets.Layout(width = '36pt'),
+                                    layout = widgets.Layout(width = '45pt'),
                                     style = {"button_color":self.color,
                                         "text_color":"white"}
                                     )

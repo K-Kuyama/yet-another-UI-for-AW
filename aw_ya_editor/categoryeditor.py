@@ -84,7 +84,7 @@ class WordInfo:
                                       layout = widgets.Layout(width="20%"))
         event_labels = [widgets.Label(value=x[0]+':'+x[1]) for x in self.events]
         event_bx = widgets.VBox(event_labels)
-        ac = widgets.Accordion(children=[event_bx],titles=["イベント表示"])
+        ac = widgets.Accordion(children=[event_bx],titles=[_("Show events")])
         
         self.widget = widgets.HBox([cb, ac],layout=widgets.Layout(border='1px solid black'))
         
@@ -108,7 +108,7 @@ class CategoryEditor(Observer):
         name_label = widgets.Label(value = self.name,layout=box_layout,style={"background":self.catd.color,"font_size":"16pt"})
         self.name_label = name_label
         self.events_box = widgets.VBox([])
-        events_viewer = widgets.Accordion(children=[self.events_box],titles=["登録されたイベント"])        
+        events_viewer = widgets.Accordion(children=[self.events_box],titles=[_("Registered events")])        
         self.events_viewer = events_viewer
         
         blank = widgets.Label(value=None,layout=widgets.Layout(height='10pt'))
@@ -123,20 +123,20 @@ class CategoryEditor(Observer):
         words_box = widgets.VBox([positive_box,negative_box],layout=widgets.Layout(border='3px solid green'))
         
         
-        include_arrow = widgets.Button(description ='▲ 含む',
-                                       layout = widgets.Layout(width = '70pt'),
+        include_arrow = widgets.Button(description =_('▲ Include'),
+                                       layout = widgets.Layout(width = '84pt'),
                                        style = {"button_color":self.catd.color, "text_color":"white", "font_weight":"bold"})
         include_arrow.on_click(self.register_positive_words)
         self.include_arrow = include_arrow
         
-        not_include_arrow = widgets.Button(description ='▲ 含まない',
-                                           layout = widgets.Layout(width = '70pt'),
+        not_include_arrow = widgets.Button(description =_('▲ Not include'),
+                                           layout = widgets.Layout(width = '84pt'),
                                             style = {"text_color":"black", "font_weight":"bold"}) 
         not_include_arrow.on_click(self.register_negative_words)
         
         moveup_buttons = widgets.HBox([include_arrow,not_include_arrow])
         
-        cancel_button = widgets.Button(description ='▼ 解除',
+        cancel_button = widgets.Button(description =_('▼ remove'),
                                            layout = widgets.Layout(width = '65pt'),
                                             style = {"text_color":"black", "font_weight":"bold"})   
         cancel_button.on_click(self.cancel_words)
@@ -151,7 +151,7 @@ class CategoryEditor(Observer):
         text_input = widgets.Text(layout = widgets.Layout(width = '300pt',border='1px solid black'))
 
         self.text_input = text_input
-        input_box = widgets.HBox([widgets.Label(value="キーワード登録"),text_input])
+        input_box = widgets.HBox([widgets.Label(value=_("Keyword")),text_input])
         word_infos = []
 
         candidate_box = widgets.VBox(word_infos,layout=widgets.Layout(border='2px solid green'))        
