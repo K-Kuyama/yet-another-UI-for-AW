@@ -311,11 +311,12 @@ class CategoryDefinition(Observable):
 
     def appendCCString(self, str):
         # append combined character sequence string
-        n_str = unicodedata.normalize('NFD',str)
-        if n_str == str:
-            return str
+        nfd_str = unicodedata.normalize('NFD',str)
+        nfc_str = unicodedata.normalize('NFC',str)
+        if nfd_str == nfc_str:
+            return nfc_str
         else:
-            return str+"|"+n_str
+            return nfc_str+"|"+nfd_str
 
     
 class CategoryContentsProxy(Observable):
