@@ -2,6 +2,7 @@ from .datastore import DataStore
 from .observation import Observable
 import unicodedata
 #from numpy.typing.tests.data import pass
+from aw_ya_core.lib import addEscape, dprint
 
 """
 class changeReporter:
@@ -304,10 +305,11 @@ class CategoryDefinition(Observable):
                 for ev in self.events:
                     if not posi_str ==".*(":
                         posi_str = posi_str+"|"
-                    posi_str = posi_str+ev[3]
+                    posi_str = posi_str+addEscape(ev[3])
             posi_str = posi_str + ")"
         return posi_str
     
+
 
     def appendCCString(self, str):
         # append combined character sequence string

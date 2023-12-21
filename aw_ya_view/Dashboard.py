@@ -117,6 +117,7 @@ class Dashboard:
         self.out.clear_output()
         self._setFig()
         for gr in self.graphs:
+            dprint(f"createView {gr[0]}")
             gr[0].createView(self.axis[gr[1]])
         self.out.clear_output(wait=True)   
         with self.out:

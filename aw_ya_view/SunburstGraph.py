@@ -4,13 +4,15 @@ import dateutil.tz as tz
 from aw_client import queries
 import matplotlib.pyplot as plt
 from aw_ya_view.lib import EnhancedJSONEncoder
+from aw_ya_core.lib import dprint, removeEscape
 
 
 def createQueryStrings(categorize1, categorize2):
     # [[categorize1で分類したリスト],{categorize1のカテゴリー名：categorize2で分類したリスト, .......}]   
     classes_str1 = json.dumps(categorize1, cls=EnhancedJSONEncoder)
+    classes_str1 = removeEscape(classes_str1)
     classes_str2 = json.dumps(categorize2, cls=EnhancedJSONEncoder)
-    
+    classes_str2 = removeEscape(classes_str2)    
     return_str = f"""
     events = flood(query_bucket(find_bucket(\"aw-watcher-window_\")));
     not_afk = flood(query_bucket(find_bucket(\"aw-watcher-afk_\")));

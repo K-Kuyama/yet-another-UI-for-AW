@@ -4,9 +4,11 @@ import dateutil.tz as tz
 from aw_client import queries
 import matplotlib.pyplot as plt
 from aw_ya_view.lib import EnhancedJSONEncoder
+from aw_ya_core.lib import dprint, removeEscape
 
 def createQueryStrings(categorize1):
     classes_str1 = json.dumps(categorize1, cls=EnhancedJSONEncoder)
+    classes_str1 = removeEscape(classes_str1)   
     return_str = f"""
     events = flood(query_bucket(find_bucket(\"aw-watcher-window_\")));
     not_afk = flood(query_bucket(find_bucket(\"aw-watcher-afk_\")));
@@ -39,6 +41,9 @@ class HourlyGraph:
             self.view = self.parent.selected_views[1]
         else:
             self.view = self.parent.selected_views[0]
+        if not self.view:
+            return 
+        
         c_name = [c.name for c in self.view.categories]
         c_name.append("Uncategorized")
             

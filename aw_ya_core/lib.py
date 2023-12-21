@@ -12,4 +12,19 @@ def tdeltaToString(timedelta):
     hr = seconds//60//60
     mn = seconds//60%60
     sec = seconds%60
-    return f"{hr}:{mn}:{sec}"
+    return f"{hr:02d}:{mn:02d}:{sec:02d}"
+
+def addEscape(str):
+        dictionary = {
+            "(":"\(",
+            ")":"\)",
+            "{":"\{",
+            "}":"\}"
+        }
+        trans_table = str.maketrans(dictionary)
+        escaped_string =  str.translate(trans_table)
+        return escaped_string
+    
+def removeEscape(str):
+        escaped_string =  str.replace("\(","(").replace("\)",")").replace("\{","{").replace("\}","}")
+        return escaped_string
