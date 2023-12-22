@@ -84,5 +84,6 @@ class HourlyGraph:
         canvas.set_xticks(x_ax)
         canvas.set_ylim(0,1)
         canvas.legend()
-        canvas.set_title(f"時間帯グラフ　{self.view.name}",fontsize=12,color="Blue")
+        title_str = _("Hourly graph")
+        canvas.set_title(f"{title_str}　{self.view.name}",fontsize=12,color="Blue")
    

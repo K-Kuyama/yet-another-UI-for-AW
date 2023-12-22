@@ -107,8 +107,8 @@ class InformationBoard:
             dt = timedelta(seconds = ev['duration'])
             data_dict1[label_str][1]=f"{label_str:<15} : {tdeltaToString(dt)}"
             
-         
-        canvas.text(0.5, 0.95, f"総合計時間 : {tdeltaToString(timedelta(seconds =total_time))}", 
+        headline_str=_("Total duration")        
+        canvas.text(0.5, 0.95, f"{headline_str} : {tdeltaToString(timedelta(seconds =total_time))}", 
                     horizontalalignment='center',verticalalignment='top',
                     fontsize=12)
 
@@ -137,7 +137,7 @@ class InformationBoard:
                         horizontalalignment='left',verticalalignment='top',
                         fontsize=8, backgroundcolor = "lightgray")
  
-        canvas.set_title(f"{self.parent.date} の情報"
+        canvas.set_title(f"{self.parent.date}"
                          ,fontsize=12,color="Blue")
             
          

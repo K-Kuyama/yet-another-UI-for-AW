@@ -38,7 +38,7 @@ class Dashboard:
                                     value=None,
                                     disabled=False,
                                     rows=1,
-                                    description="分類1",
+                                    description=_("Viewpoint 1"),
                                     layout=widgets.Layout(width='300px')
                                     )
         self.selector1 = view_selector1
@@ -47,7 +47,7 @@ class Dashboard:
                                     value=None,
                                     disabled=False,
                                     rows=1,
-                                    description="分類2",                                    
+                                    description=_("Viewpoint 2"),                                    
                                     layout=widgets.Layout(width='300px')
                                     )
         self.selector2 = view_selector2
@@ -55,13 +55,13 @@ class Dashboard:
 
         date_picker = widgets.DatePicker(value=date.today(), layout=widgets.Layout(width='160px'))  
         self.date_picker = date_picker
-        update_button = widgets.Button(description = "表示",layout=widgets.Layout(width='60px'))
+        update_button = widgets.Button(description = _("Show"),layout=widgets.Layout(width='60px'))
         #更新ボタンのコールバック設定
         update_button.on_click(self.updateView)
 #        selector_layout = widgets.Layout(border='3px solid green')
         datasets = widgets.HBox([selector_box, date_picker, update_button])
 #        self.widget.children = [selector_box, date_picker, update_button]
-        load_button = widgets.Button(description = "再読込み",layout=widgets.Layout(width='120px'))
+        load_button = widgets.Button(description = _("Reload definitions"),layout=widgets.Layout(width='140px'))
         load_button.on_click(self.reload)
         panel_layout = widgets.Layout(display='flex',
                                     flex_flow='row',

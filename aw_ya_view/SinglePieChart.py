@@ -63,8 +63,8 @@ class SinglePieChart:
             wedgeprops={"edgecolor":'white'}
             canvas.pie(cat1_data, labels=cat1_labels, startangle=90, counterclock=False, 
                        wedgeprops=wedgeprops, colors=cat1_colors, labeldistance=0.1, rotatelabels=True)
-            
-            canvas.set_title(f"時間比率 {self.view.name}"
+            title_str = _("Pie Chart")
+            canvas.set_title(f"{title_str} {self.view.name}"
                          ,fontsize=12,color="Blue")
         
         

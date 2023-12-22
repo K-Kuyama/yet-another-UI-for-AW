@@ -110,7 +110,8 @@ class SunburstGraph:
             canvas.pie(cat2_data, radius=1.1, labels=cat2_labels, startangle=90, counterclock=False, 
                        wedgeprops=wedgeprops, colors=cat2_colors, labeldistance=0.8, rotatelabels=True)
         
-            canvas.set_title(f"時間比率 {self.parent.selected_views[0].name}/{self.parent.selected_views[1].name}"
+            title_str = _("Pie Chart")
+            canvas.set_title(f"{title_str} {self.parent.selected_views[0].name}/{self.parent.selected_views[1].name}"
                          ,fontsize=12,color="Blue")
         
         
