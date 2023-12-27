@@ -5,7 +5,7 @@ Category editor provides the functions "setting up viewpoints", "setting up cate
 "Setting up categorization rules for each category".
 All set up data is saved in "DefDB.db" as a SQLite database file.
 
-！[Category Editor Overview](EditorUsage.png)
+![Category Editor Overview](EditorUsage.png)
 
 
 ### 1. Setting up viewpoints
@@ -17,7 +17,7 @@ All set up data is saved in "DefDB.db" as a SQLite database file.
 
 ![Viewpoint Editor](ViewPointEditor_popup.png)
 
-### 2. Settig up categories
+### 2. Setting up categories
 
 - Open Category Editor. You can add, edit and delete from this editor.
 
