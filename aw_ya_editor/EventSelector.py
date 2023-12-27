@@ -58,7 +58,7 @@ class EventSelector(Observer):
         date_picker = widgets.DatePicker(value=date.today(), layout=widgets.Layout(width='160px'))  
         self.date_picker = date_picker
         
-        update_button = widgets.Button(description = _("Reload"),layout=widgets.Layout(width='60px'))
+        update_button = widgets.Button(description = _("Reload"),layout=widgets.Layout(width='80px'))
         #更新ボタンのコールバック設定
         update_button.on_click(self.updateData)
         
