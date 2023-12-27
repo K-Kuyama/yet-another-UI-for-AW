@@ -111,7 +111,7 @@ class PropertyEditor:
                                                 display='flex', flex_flow='colomun',
                                                 justify_content='center'))
         # 動的に表示・非表示を切り替えるためにOutputウィジェットを作る
-        self.out = widgets.Output()
+        self.out = widgets.Output(layout = widgets.Layout(width ='260pt'))
 
     def showEditPanel(self, caller):
         self.caller = caller
