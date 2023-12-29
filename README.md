@@ -1,10 +1,15 @@
 # yet-another-UI-for-AW
 UI-client for ActivityWatch. Include a category editor and a viewer for multiple categorizations. 
 
+
 ## About
 This is an experimental user interface client for ActivityWatch by using Jupyter notebook.
 It provides a new features different from the original one.
 It runs separately from the original GUI. So, it provides a new features without any change to your Activity Watch running on your computer.
+
+<img src="docs/DefEditor_small.png" height="300">
+
+<img src="docs/DashBoard_small.png" height="300">
 
 ## Features
 
