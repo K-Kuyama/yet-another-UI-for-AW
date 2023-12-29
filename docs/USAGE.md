@@ -1,9 +1,8 @@
 # Usage
 
 ## CategoryEditor
-Category editor provides the functions "setting up viewpoints", "setting up categories for each viewpoint" and 
-"Setting up categorization rules for each category".
-All set up data is saved in "DefDB.db" as a SQLite database file.
+Category editor provides the functions 'setting up viewpoints', 'setting up categories for each viewpoint' and 
+'Setting up categorization rules for each category'.
 
 ![Category Editor Overview](EditorUsage.png)
 
@@ -19,7 +18,7 @@ All set up data is saved in "DefDB.db" as a SQLite database file.
 
 ### 2. Setting up categories
 
-- Open Category Editor. You can add, edit and delete from this editor.
+- Open Category Editor. You can add, edit and delete from this editor as same as Viewpoint Editor.
 
 ![Category Editor](CategoryEditor.png)
 
@@ -30,7 +29,7 @@ In this program, you can register strings that match events, and those strings a
 
 #### 3.1 Event title exact matching
 
-Registering whole event title strings on the "event selector". Enevt selector shows you all events in the desinated date as a list and you can select events you want to register for a category from the list.
+Registering whole event title strings on the "event selector". Event selector shows you all events in the specified date as a list and you can select events you want to register for a category from the list.
 
 ![Register Events](RegisterEvent.png)
 
@@ -48,11 +47,11 @@ And you can register the key-word by clicking "include" or "not include" button.
 
 ![DashBoard](DashBoard.png)
 
-### 1. Input viewoints and date
+### 1. Input viewpoints and date
 
 - Select one or two viewpoint from the selector
-- Select the date from the date picker
-- Click "Show" button and just wait until graphs appear (Some time it takes a long time)
+- Select the date from the date picker (Currently, 'week', 'month' not supported.) 
+- Click "Show" button and just wait until graphs appear (Some time it takes a long time.)
 
 
 ### 2. Reload CategoryEditor data

@@ -1,12 +1,12 @@
 # yet-another-UI-for-AW
-UI for ActivityWatch. Include category editor and viewer for multiple categorizations. 
+UI-client for ActivityWatch. Include a category editor and a viewer for multiple categorizations. 
 
 ## About
-This is an experimental user interface for ActivityWatch by using Jupyter notebook.
-It provides a new web GUI different from the original, but ActivityWatch's server and watcher can still be used as they are.
-Of course, you can also use the original GUI of ActivityWatch as it is.
+This is an experimental user interface client for ActivityWatch by using Jupyter notebook.
+It provides a new features different from the original one.
+It runs separately from the original GUI. So, it provides a new features without any change to your Activity Watch running on your computer.
 
-## Feature
+## Features
 
 ### Multi categorization :
 - Can be categorized from the different viewpoints.For example, 
@@ -17,11 +17,11 @@ Of course, you can also use the original GUI of ActivityWatch as it is.
 - Key-word base categorization
 - Exact match for the window title 
 
-### Internationaraization and some Japanese localozation :
+### Internationalization and some Japanese localization :
 - Added a feature to extract words from Japanese text.
 
 ### Unicode Normalization :
-- Neormalize keywords, by "NFC" and "NFD" unicode normailzation
+- Normalize keywords, by "NFC" and "NFD" to match both of “combined character sequence” and “precomposed character”  of unicode strings. 
 
 ## Installation
 Prerequisites :  ActivityWatch server and watcher running and poetry need to be installed.
@@ -34,11 +34,15 @@ Prerequisites :  ActivityWatch server and watcher running and poetry need to be 
 
 ## Start program
 
+### Start from shell script
+
 1. Go to `yet-another-UI-for-AW` folder
 2. Run `poetry run ./start_ui.sh`
 
 `start_ui.sh` calls [voila](https://github.com/voila-dashboards/voila) that turns Jupyter notebooks into standalone web applications.
-If you want to call the program from Jupyter notebook, just select/run 'DefEditorApp.ipynb' and 'QtDashBoardApp.ipynb'.
+
+### Start from Jupyter notebook
+If you are familior with Jupyter notebook, you can call the program from Jupyter notebook. Start Jupyter notebook from `yet-another-UI-for-AW` folder, then select/run `DefEditorApp.ipynb` and `QtDashBoardApp.ipynb`.
 
 ## Usage
 [Please refer from here](docs/USAGE.md)
