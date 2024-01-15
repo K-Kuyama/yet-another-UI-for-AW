@@ -46,5 +46,5 @@ def main():
     print(p2)
 
     while True:
-        print(f"waiting {wait_time} sec")
+#        print(f"waiting {wait_time} sec")
         time.sleep(wait_time)
