@@ -1,12 +1,16 @@
 import sqlite3
 import pandas as pd
-
+import os
 
 class DataStore:
     _instance = None
 
     def __init__(self):
-        self.db_name = "DefDB.db"
+        if os.getenv('YA_DBFILE_PATH'):
+            self.db_name = os.getenv('YA_DBFILE_PATH')
+        else:
+            self.db_name = "DefDB.db"
+        print(self.db_name)
         self.views_table = "AnalysisViewDef"
         self.categories_table = "CategoryDef"
         self.events_table = "SelectedEvents"

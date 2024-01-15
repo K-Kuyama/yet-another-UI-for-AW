@@ -1,4 +1,8 @@
 from datetime import datetime, timedelta
+import sys
+import os
+
+
 DEBUG_FILE = "debug.txt"
 
 
@@ -16,18 +20,20 @@ def tdeltaToString(timedelta):
     return f"{hr: 2d}:{mn: 02d}:{sec: 02d}"
 
 
-def addEscape(str):
+def addEscape(string):
     dictionary = {
             "(": "\(",
             ")": "\)",
             "{": "\{",
             "}": "\}"
         }
-    trans_table = str.maketrans(dictionary)
-    escaped_string = str.translate(trans_table)
+    trans_table = string.maketrans(dictionary)
+    escaped_string = string.translate(trans_table)
     return escaped_string
 
 
-def removeEscape(str):
-    escaped_string = str.replace("\(", "(").replace("\)", ")").replace("\{", "{").replace("\}", "}")
+def removeEscape(string):
+    escaped_string = string.replace("\(", "(").replace("\)", ")").replace("\{", "{").replace("\}", "}")
     return escaped_string
+
+
