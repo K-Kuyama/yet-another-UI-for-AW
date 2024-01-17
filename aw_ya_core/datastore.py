@@ -10,7 +10,11 @@ class DataStore:
             self.db_name = os.getenv('YA_DBFILE_PATH')
         else:
             self.db_name = "DefDB.db"
+<<<<<<< HEAD
  #       print(self.db_name)
+=======
+#        print(self.db_name)
+>>>>>>> dev
         self.views_table = "AnalysisViewDef"
         self.categories_table = "CategoryDef"
         self.events_table = "SelectedEvents"
