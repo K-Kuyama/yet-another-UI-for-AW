@@ -11,7 +11,7 @@ import os
 from voila.app import Voila
 
 from IPython.display import *
-from aw_ya_editor.defeditor import *
+from aw_ya_editor.defeditor import AnalysisDefEditor
 
 
 def get_resource_path():    
