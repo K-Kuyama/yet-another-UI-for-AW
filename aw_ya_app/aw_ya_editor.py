@@ -14,10 +14,13 @@ from IPython.display import *
 from aw_ya_editor.defeditor import *
 
 
-def get_resource_path():
+def get_resource_path():    
     rel_path = sys.argv[0]
     abs_path = os.path.join(os.path.abspath("."), rel_path)
-    return os.path.join( os.path.dirname(abs_path),"..")
+    if getattr(sys,'frozen',False):
+        return os.path.join(os.path.dirname(abs_path),"_internal")
+    else:
+        return os.path.join( os.path.dirname(abs_path),"..")
 
 def start_voila(file_path):
     app = Voila()
