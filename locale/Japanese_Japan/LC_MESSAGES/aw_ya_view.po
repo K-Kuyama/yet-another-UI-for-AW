@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2023-12-22 10:59+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: Dashboard.py:41
+msgid "Viewpoint 1"
+msgstr "ビュー 1"
+
+#: Dashboard.py:50
+msgid "Viewpoint 2"
+msgstr "ビュー 2"
+
+#: Dashboard.py:58
+msgid "Show"
+msgstr "表示"
+
+#: Dashboard.py:64
+msgid "Reload definitions"
+msgstr "定義再読込み"
+
+#: InformationBoard.py:110
+msgid "Total duration"
+msgstr "合計時間"
+
+#: SinglePieChart.py:66 SunburstGraph.py:113
+msgid "Pie Chart"
+msgstr "円グラフ"
+
+#: timebargraph.py:87
+msgid "Hourly graph"
+msgstr "時間帯グラフ"
+

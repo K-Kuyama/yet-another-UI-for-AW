@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2023-12-19 16:49+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: EventSelector.py:50
+msgid "Longest events"
+msgstr "時間の長いイベント"
+
+#: EventSelector.py:50
+msgid "latest events"
+msgstr "最近のイベント"
+
+#: EventSelector.py:61
+msgid "Reload"
+msgstr "更新"
+
+#: EventSelector.py:107
+msgid "Cancel"
+msgstr "解除"
+
+#: EventSelector.py:129
+msgid " - "
+msgstr "〜"
+
+#: categoryeditor.py:87
+msgid "Show events"
+msgstr "イベント表示"
+
+#: categoryeditor.py:111
+msgid "Registered events"
+msgstr "登録されたイベント"
+
+#: categoryeditor.py:126
+msgid "▲ Include"
+msgstr "▲ 含む"
+
+#: categoryeditor.py:132
+msgid "▲ Not include"
+msgstr "▲ 含まない"
+
+#: categoryeditor.py:139
+msgid "▼ remove"
+msgstr "▼ 解除"
+
+#: categoryeditor.py:154
+msgid "Keyword"
+msgstr "キーワード登録"
+
+#: itembuilder.py:17
+msgid " Editor"
+msgstr "定義の追加・削除・編集"
+
+#: itembuilder.py:32
+msgid "Viewpoint"
+msgstr "ビューポイント"
+
+#: itembuilder.py:57
+msgid "Category"
+msgstr "カテゴリー"
+
+#: itembuilder.py:92
+msgid "Title:"
+msgstr "タイトル :"
+
+#: itembuilder.py:96
+msgid "Color:"
+msgstr "色 :"
+
+#: itembuilder.py:92
+msgid "Save"
+msgstr "保存"
+
+#: itembuilder.py:144
+msgid "Add a new item"
+msgstr "アイテムの追加"
+
+#: itembuilder.py:205
+msgid "delete"
+msgstr "削除"
+
+#: itembuilder.py:212
+msgid "Edit"
+msgstr "編集"
+
