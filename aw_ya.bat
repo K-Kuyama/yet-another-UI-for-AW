@@ -7,5 +7,5 @@ set PATH=%fpath%.venv\Scripts;%PATH%
 echo %PATH%
 
 
-start python.exe %fapath%aw_ya_launcher.py %fapath%DefEditorApp.ipynb
-start python.exe %fapath%aw_ya_launcher.py %fapath%QtDashBoardApp.ipynb
+start python.exe %fpath%aw_ya_launcher.py %fpath%DefEditorApp.ipynb
+start python.exe %fpath%aw_ya_launcher.py %fpath%QtDashBoardApp.ipynb

@@ -8,8 +8,7 @@ killall(){
 
 SHELL_DIR=$(cd $(dirname $0) && pwd)
 
-$SHELL_DIR/.venv/bin/voila $SHELL_DIR/DefEditorApp.ipynb &
-sleep 5
-$SHELL_DIR/.venv/bin/voila $SHELL_DIR/QtDashBoardApp.ipynb &
+$SHELL_DIR/.venv/bin/python $SHELL_DIR/aw_ya_launcher.py $SHELL_DIR/DefEditorApp.ipynb &
+$SHELL_DIR/.venv/bin/python $SHELL_DIR/aw_ya_launcher.py $SHELL_DIR/QtDashBoardApp.ipynb &
 
 wait
