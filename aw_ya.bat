@@ -3,7 +3,7 @@
 echo %~dp0
 
 set fpath=%~dp0
-set PATH=%fpath%.venv\Scripts;%PATH%
+set PATH=%fpath%python-3.11.7-embed;%PATH%
 echo %PATH%
 
 
